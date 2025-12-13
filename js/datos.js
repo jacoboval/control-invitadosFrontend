@@ -21,7 +21,7 @@ form.addEventListener("submit", async function (e) {
         //tokenAcceso: token
     };
 
-    const response = await fetch("http://127.0.0.1:8083/rsvp/confirmar", {
+    const response = await fetch("https://control-invitados-backend.onrender.com:8080/rsvp/confirmar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -59,7 +59,7 @@ form.addEventListener("submit", async function (e) {
         tokenAcceso: tokenAcceso
     };
 
-    const response = await fetch("http://127.0.0.1:8083/rsvp/confirmar", {
+    const response = await fetch("https://control-invitados-backend.onrender.com:8080/rsvp/confirmar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

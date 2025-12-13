@@ -45,7 +45,7 @@ if (!token) {
 
 async function cargarDatosInvitado() {
     try {
-        const response = await fetch(`http://127.0.0.1:8083/admin/buscar/${token}`);
+        const response = await fetch(`https://control-invitados-backend.onrender.com:8080/admin/buscar/${token}`);
 
         if (!response.ok) {
             throw new Error("Invitado no encontrado");

@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8083";
+const API_URL = "https://control-invitados-backend.onrender.com:8080";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
