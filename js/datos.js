@@ -38,6 +38,7 @@ function mostrarMensajeBonito() {
     document.getElementById("mensaje-exito").classList.remove("d-none");
 }
     */
+const API_URL = "https://control-invitados-backend.onrender.com";
 const form = document.getElementById("form-rsvp");
 let enviado = false;
 
@@ -59,7 +60,7 @@ form.addEventListener("submit", async function (e) {
         tokenAcceso: tokenAcceso
     };
 
-    const response = await fetch("https://control-invitados-backend.onrender.com:8080/rsvp/confirmar", {
+    const response = await fetch(`${API_URL}/admin/rsvp/confirmar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

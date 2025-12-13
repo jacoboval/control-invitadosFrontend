@@ -1,4 +1,4 @@
-const API_URL = "https://control-invitados-backend.onrender.com:8080";
+const API_URL = "https://control-invitados-backend.onrender.com";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
@@ -45,14 +45,14 @@ async function cargarInvitados() {
 
 /* COPIAR ENLACE */
 function copiarEnlace(token) {
-    const url = `http://127.0.0.1:8083/invitacion?t=${token}`;
+    const url = `${ API_URL }/invitacion?t=${token}`;
     navigator.clipboard.writeText(url);
     alert("Enlace copiado:\n" + url);
 }
 
 /* ENVIAR WHATSAPP */
 function enviarWhatsapp(nombre, token) {
-    const url = `http://127.0.0.1:5500/index.html?t=${token}`;
+    const url = `${API_URL}/index.html?t=${token}`;
     const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, "_blank");
 }

@@ -35,6 +35,7 @@ async function cargarDatosInvitado() {
 
 cargarDatosInvitado();
 */
+const API_URL = "https://control-invitados-backend.onrender.com";
 const TOKEN_STORAGE_KEY = 'invitation_token';
 const params = new URLSearchParams(window.location.search);
 const token = params.get("t");
@@ -45,7 +46,7 @@ if (!token) {
 
 async function cargarDatosInvitado() {
     try {
-        const response = await fetch(`https://control-invitados-backend.onrender.com:8080/admin/buscar/${token}`);
+        const response = await fetch(`${API_URL}/admin/buscar/${token}`);
 
         if (!response.ok) {
             throw new Error("Invitado no encontrado");

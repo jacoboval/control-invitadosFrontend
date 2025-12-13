@@ -1,3 +1,4 @@
+const API_URL = "https://control-invitados-backend.onrender.com";
 document.getElementById("form-crear-lista-invitados").addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -18,7 +19,7 @@ document.getElementById("form-crear-lista-invitados").addEventListener("submit",
             telefono: document.getElementById("telefonoinvitado").value,
         };
 
-        const response = await fetch("https://control-invitados-backend.onrender.com/admin/", {
+        const response = await fetch(`${API_URL}/admin`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
