@@ -1,4 +1,4 @@
-const API_URL = "https://control-invitados-backend.onrender.com";
+//const API_URL = "https://control-invitados-backend.onrender.com";
 const form = document.getElementById("form-rsvp");
 let enviado = false;
 
@@ -20,7 +20,7 @@ form.addEventListener("submit", async function (e) {
         tokenAcceso: tokenAcceso
     };
 
-    const response = await fetch(`${API_URL}/rsvp/confirmar`, {
+    const response = await fetch("https://control-invitados-backend.onrender.com/rsvp/confirmar", {                           
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
