@@ -45,7 +45,7 @@ async function cargarInvitados() {
 
 /* COPIAR ENLACE */
 function copiarEnlace(token) {
-    const url = `${ API_URL }/invitacion?t=${token}`;
+    const url = `${ API_URL }/index,html?t=${token}`;
     navigator.clipboard.writeText(url);
     alert("Enlace copiado:\n" + url);
 }
